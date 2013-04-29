@@ -1,12 +1,13 @@
 ﻿using System.Windows.Media;
+using Microsoft.Xna.Framework.Media;
 
 namespace PictureTagging.Model
 {
     public class PictureRef
     {
-        private string _id;
+        private Picture _id;
 
-        public string Id
+        public Picture Id
         {
             get
             {

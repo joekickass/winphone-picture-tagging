@@ -30,7 +30,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
+            <Image Name="FullPicture" HorizontalAlignment="Center" VerticalAlignment="Center" Width="Auto" Height="Auto"/>
         </Grid>
     </Grid>
 

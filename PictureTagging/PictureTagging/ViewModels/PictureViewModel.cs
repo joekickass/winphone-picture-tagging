@@ -44,7 +44,7 @@ namespace PictureTagging.ViewModels
             bitmap.SetSource(picture.GetThumbnail());
             var result = new PictureRef()
                 {
-                    Id = picture.Name,
+                    Id = picture,
                     Src = bitmap
                 };
             
