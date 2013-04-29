@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Windows;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using PictureTagging.Resources;
 
 namespace PictureTagging
 {
@@ -18,8 +11,35 @@ namespace PictureTagging
         {
             InitializeComponent();
 
+            // App context has the pictures model
+            DataContext = App.ViewModel;
+
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+        
+        // Load data when user navigates to page
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (!App.ViewModel.IsDataLoaded)
+            {
+                App.ViewModel.LoadData();
+            }
+        }
+
+        // Handle item selected
+        private void PictureGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (PictureGrid.SelectedItem == null)
+            {
+                return;
+            }
+
+            // TODO: Do something clever
+            System.Diagnostics.Debug.WriteLine("User clicked an item!");
+
+            // Reset selection
+            PictureGrid.SelectedItem = null;
         }
 
         // Sample code for building a localized ApplicationBar
