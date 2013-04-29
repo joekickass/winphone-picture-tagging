@@ -1,13 +1,14 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 
 namespace PictureTagging
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class PictureGridPage : PhoneApplicationPage
     {
         // Constructor
-        public MainPage()
+        public PictureGridPage()
         {
             InitializeComponent();
 
@@ -34,9 +35,8 @@ namespace PictureTagging
             {
                 return;
             }
-
-            // TODO: Do something clever
-            System.Diagnostics.Debug.WriteLine("User clicked an item!");
+  
+            NavigationService.Navigate(new Uri("/SelectedPicturePage.xaml", UriKind.Relative));
 
             // Reset selection
             PictureGrid.SelectedItem = null;
