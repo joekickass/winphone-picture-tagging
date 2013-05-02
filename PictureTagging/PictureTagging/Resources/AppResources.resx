@@ -128,11 +128,8 @@
   <data name="ApplicationTitle" xml:space="preserve">
     <value>PICTURE TAGGING</value>
   </data>
-  <data name="AppBarButtonText" xml:space="preserve">
-    <value>add</value>
-  </data>
-  <data name="AppBarMenuItemText" xml:space="preserve">
-    <value>Menu Item</value>
+  <data name="AppBarAddTag" xml:space="preserve">
+    <value>Tag</value>
   </data>
   <data name="PictureGridPage" xml:space="preserve">
     <value>Select Picture</value>

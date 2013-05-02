@@ -61,20 +61,11 @@ namespace PictureTagging.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to add.
+        ///   Looks up a localized string similar to Tag.
         /// </summary>
-        public static string AppBarButtonText {
+        public static string AppBarAddTag {
             get {
-                return ResourceManager.GetString("AppBarButtonText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Menu Item.
-        /// </summary>
-        public static string AppBarMenuItemText {
-            get {
-                return ResourceManager.GetString("AppBarMenuItemText", resourceCulture);
+                return ResourceManager.GetString("AppBarAddTag", resourceCulture);
             }
         }
         
