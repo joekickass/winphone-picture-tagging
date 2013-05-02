@@ -137,4 +137,7 @@
   <data name="SelectedPicturePageTitle" xml:space="preserve">
     <value>Tag picture</value>
   </data>
+  <data name="ContactsPickerPageTitle" xml:space="preserve">
+    <value>Pick Contact</value>
+  </data>
 </root>

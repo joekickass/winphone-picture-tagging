@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
 using PictureTagging.Model;
 
 namespace PictureTagging
 {
-    public partial class PictureGridPage : PhoneApplicationPage
+    public partial class PictureGridPage
     {
         // Constructor
         public PictureGridPage()

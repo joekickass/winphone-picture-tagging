@@ -94,6 +94,9 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="LocalizedStrings.cs" />
+    <Compile Include="ContactsPickerPage.xaml.cs">
+      <DependentUpon>ContactsPickerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PictureGridPage.xaml.cs">
       <DependentUpon>PictureGridPage.xaml</DependentUpon>
     </Compile>
@@ -114,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="ContactsPickerPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PictureGridPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

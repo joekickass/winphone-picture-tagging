@@ -79,6 +79,15 @@ namespace PictureTagging.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pick Contact.
+        /// </summary>
+        public static string ContactsPickerPageTitle {
+            get {
+                return ResourceManager.GetString("ContactsPickerPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Picture.
         /// </summary>
         public static string PictureGridPage {

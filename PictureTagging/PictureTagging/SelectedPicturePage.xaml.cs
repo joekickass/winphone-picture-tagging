@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using PictureTagging.Resources;
 
 namespace PictureTagging
 {
-    public partial class SelectedPicturePage : PhoneApplicationPage
+    public partial class SelectedPicturePage
     {
         public SelectedPicturePage()
         {
@@ -51,7 +50,13 @@ namespace PictureTagging
                 {
                     Text = AppResources.AppBarAddTag
                 };
+            appBarButton.Click += tagButton_Click;
             ApplicationBar.Buttons.Add(appBarButton);
+        }
+
+        private void tagButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/ContactsPickerPage.xaml", UriKind.Relative));
         }
     }
 }
