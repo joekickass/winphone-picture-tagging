@@ -1,7 +1,6 @@
 ﻿using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
-using Microsoft.Xna.Framework.Media;
 
 namespace PictureTagging
 {
@@ -20,12 +19,18 @@ namespace PictureTagging
                 App.ViewModel.LoadData();
             }
 
-            SetImage();
+            base.OnNavigatedTo(e);
+
+            var index = "";
+            if (NavigationContext.QueryString.TryGetValue("index", out index))
+            {
+                SetImage(int.Parse(index));
+            }
         }
 
-        private void SetImage()
+        private void SetImage(int index)
         {
-            var refPic = App.ViewModel.Pictures[0].Id;
+            var refPic = App.ViewModel.Pictures[index].Id;
             var bitmap = new BitmapImage();
             bitmap.SetSource(refPic.GetImage());
             FullPicture.Source = bitmap;

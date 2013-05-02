@@ -2,6 +2,7 @@
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
+using PictureTagging.Model;
 
 namespace PictureTagging
 {
@@ -35,8 +36,10 @@ namespace PictureTagging
             {
                 return;
             }
-  
-            NavigationService.Navigate(new Uri("/SelectedPicturePage.xaml", UriKind.Relative));
+
+            // TODO: Must be some easier way to get index of selected item
+            var index = App.ViewModel.Pictures.IndexOf(PictureGrid.SelectedItem as PictureRef);
+            NavigationService.Navigate(new Uri("/SelectedPicturePage.xaml?index=" + index, UriKind.Relative));
 
             // Reset selection
             PictureGrid.SelectedItem = null;
