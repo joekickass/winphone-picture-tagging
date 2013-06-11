@@ -4,8 +4,8 @@
   <App xmlns="" ProductID="{dad3bc15-4e88-4c47-97bd-cb1176316054}" Title="PictureTagging" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="PictureTagging author" Description="Sample description" Publisher="PictureTagging" PublisherID="{cfada175-1a32-4d01-ae73-6c6383c661f5}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
-      <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+      <Capability Name="ID_CAP_CONTACTS" />
     </Capabilities>
     <Tasks>
       <DefaultTask Name="_default" NavigationPage="PictureGridPage.xaml" />
